@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './header';
-import Form from './form';
-import Footer from './footer';
+import Header from './header/header';
+import Form from './form/form';
+import Footer from './footer/footer';
 import './app.scss';  //base design for site
 
 
