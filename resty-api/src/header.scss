@@ -1,0 +1,15 @@
+$fontColor: rgb(11, 12, 14);
+
+#header-div{
+  color: $fontColor;
+  background-color: rgb(121, 134, 252);
+  height: 150px;
+  border-radius: 3px;
+
+  h1{
+    font-size: 70px;
+    margin: 0px;
+   padding-top: 20px;
+ 
+  } 
+}
