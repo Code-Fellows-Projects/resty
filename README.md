@@ -1,13 +1,15 @@
 # LAB: Class 26 - Component Based UI
+
 # LAB: Class 27 - LAB - Props and State
 
 + RESTy Phase 1: Begin work on the RESTy API testing application
++ RESTy Phase 2: Connect RESTy with APIs, running live requests
 
 ## Author: Stacy Burris
 
 ### Links
 
-+ [Pull request](https://github.com/stacyburris/resty/pull/1)
++ [Pull request](https://github.com/stacyburris/resty/pull/7)
 + [Resty Repo](https://github.com/stacyburris/resty)
 + [Github-pages](https://stacyburris.github.io/resty/)
 + [Github-pages Activity Log](https://github.com/stacyburris/resty/deployments/activity_log?environment=github-pages)
@@ -16,21 +18,30 @@
 
 + Created repo
 + Navigate to where you want to put it
-+ npx create-react-app `<`repo name>`
++ npx create-react-app `<repo name>`
 + Deleted unnecessary files
 
 ### Running the app
 
 + Terminal:
-  + npm start or nodemon
-    + `http://localhost:3000/`
-    + Enter any url
-    + Click Go!
-    + Click route
+  + npm start
+    + Enter Api route: `https://swapi.dev/api/people`
+    + Press GET
+    + Press Go!
+
+### Deploy on Gh-pages with React
+
++ Install dependencies - gh-pages
++ Add 2 scripts in package.json:
+  + `"predeploy": "npm run build",`
+  + `"deploy": "gh-pages -d build"`
++ npm run predeploy
++ npm run deploy
 
 ### UML
 
-![LAB - Component Based UI](UML-lab26.png)
+![LAB - Component Based UI](assets/UML-lab26.png)
+![LAB - Props and State](assets/UML-lab27.png)
 
 
 ///////////////////////////////////////////////////////////////////

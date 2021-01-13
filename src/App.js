@@ -37,15 +37,11 @@ class App extends React.Component {
         />
         <Form
           apiResults={this.updateResults}
-        //results={this.state.results}
         />
         <Results
           count={this.state.count}
           results={this.state.results}
-
-
         />
-
         <Footer />
       </>
     )
