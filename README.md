@@ -1,4 +1,5 @@
 # LAB: Class 26 - Component Based UI
+# LAB: Class 27 - LAB - Props and State
 
 + RESTy Phase 1: Begin work on the RESTy API testing application
 
@@ -8,6 +9,8 @@
 
 + [Pull request](https://github.com/stacyburris/resty/pull/1)
 + [Resty Repo](https://github.com/stacyburris/resty)
++ [Github-pages](https://stacyburris.github.io/resty/)
++ [Github-pages Activity Log](https://github.com/stacyburris/resty/deployments/activity_log?environment=github-pages)
 
 ### Setup
 
