@@ -47,8 +47,8 @@ class Form extends React.Component {
       <div id="form">
         <form onSubmit={this.handleSubmitUrl}>
           <input name="url" placeholder="Please Enter a URL" type="text" />
-          <button type="submit">Go!</button>
-
+          <button type="submit"><span data-testId="submit-count"></span>Go!</button>
+          {/* //<p><span data-testId="count-number">{"Count:" + this.props.count}</span></p> */}
           <div onClick={this.handleClickGo}>
             <button name="get">GET</button>
             <button name="put">PUT</button>
