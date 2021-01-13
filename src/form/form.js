@@ -1,12 +1,45 @@
 import React from 'react';
 import './form.scss';
-// lab requirements
-/* <Form />
-Expects a function to be sent to it as a prop
-Renders a URL entry form
-A selection of REST methods to choose from (“get” should be the default)
-On submit
-Send the API results back to the <App> using the method sent down in props */
+
+
+// class Form extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       url: '',
+//       route: ''
+//     }
+//   }
+//   handleSubmitUrl = async (e) => {
+//     e.preventDefault();
+//     const url = e.target.url.value;
+//     this.setState({ url });
+//     try {
+//       //if (this.state.route) { this.setState({ display: true }) }
+//       var stars = await fetch(this.state.url, { method: this.state.route || 'GET', mode: 'cors' })
+
+//     } catch (err) {
+//       console.error(err);
+//     }
+//     try {
+//       var data = await stars.json()
+//       let headers = {};
+
+//       // stars.headers.entries = ['foo, 'bar]
+
+//       for (let pair of stars.headers.entries()) {
+//         headers[pair[0]] = pair[1]
+//       }
+
+//       console.log('headers', headers);
+//       this.setState({ headers });
+//     } catch (err) {
+//       console.error(err);
+//     }
+//     console.log('this.is my data', data)
+//     this.props.apiResults(data);
+//   }
+///////////////////////////////////////////////////////////////////////////////////
 class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -33,14 +66,22 @@ class Form extends React.Component {
     this.props.apiResults(data);
 
   }
+  ////////////////////////////////////////////////////////////////////////////
+  // .then(response => {
+  //   console.log('response here', response);
+  //   return response.json();
+  // })
+  // .catch(err => {
+  //   console.log('ERROR', err);
+  // });
 
   handleClickGo = e => {
     const route = e.target.name;
     this.setState({ route });
 
     //if (this.state.url) { this.setState({ display: true }) }
-  }
 
+  }
   render() {
     //console.log('---------------------', this.props.results)
     return (
@@ -60,55 +101,8 @@ class Form extends React.Component {
     )
   }
 }
+
 export default Form;
-
-
-
-
-
-  // old code lab 26
-   //{!this.state.display ? "" :}
-  // handleUrl = e => {
-  //   let newPath = e.target.value;
-  //   //console.log(e.target.value);
-  //   this.setState({ url: newPath });
-  // }
-
-  // handleClickGo = e => {
-  //   e.preventDefault();
-  //   let newPath = this.state.url;
-  //   console.log('URL_____', this.state.url);
-  //   let newUrlWithPath = this.state.route;
-  //   console.log('ROUTE_____', this.state.route);
-  //   this.setState({ url: newPath });
-  //   this.setState({ route: newUrlWithPath });
-  //   //let url = this.state.url;
-  //   //let route = this.state.route;
-  //   //return `${newPath} ${newUrlWithPath}`
-  // }
-
-  // handleGet = e => {
-  //   e.preventDefault();
-  //   let getPath = e.target.id;
-  //   this.setState({ route: getPath });
-
-  // }
-  // handlePost = e => {
-  //   e.preventDefault();
-  //   let postPath = e.target.id;
-  //   this.setState({ route: postPath });
-  // }
-  // handlePut = e => {
-  //   e.preventDefault();
-  //   let putPath = e.target.id;
-  //   this.setState({ route: putPath });
-  // }
-  // handleDelete = e => {
-  //   e.preventDefault();
-  //   let deletePath = e.target.id;
-  //   this.setState({ route: deletePath });
-  // }
-
 
 
 // old code lab 26
@@ -124,12 +118,7 @@ export default Form;
           <div class="enter">
 
             <h3>{this.state.route} {this.state.url}</h3>
-
-
-
           </div>
-
-
         </>
     )
          {/* <div>
