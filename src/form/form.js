@@ -56,6 +56,7 @@ class Form extends React.Component {
     const stars = await fetch(this.state.url, { method: this.state.route, mode: 'cors' })
     const data = await stars.json();
 
+
     // .then(response => {
     //   console.log('response here', response);
     //   return response.json();
@@ -63,6 +64,8 @@ class Form extends React.Component {
     // .catch(err => {
     //   console.log('ERROR', err);
     // });
+    console.log('DATA', data[0]);
+    console.log('BODY-----------', data.body);
     this.props.apiResults(data);
 
   }
@@ -83,6 +86,7 @@ class Form extends React.Component {
 
   }
   render() {
+    //console.log('THIS IS MY DATA', this.props.data)
     //console.log('---------------------', this.props.results)
     return (
       <div id="form">

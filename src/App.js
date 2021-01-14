@@ -10,8 +10,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: '',
-      headers: {},
+      // count: '',
+      //headers: {},
       results: [],
 
     };
@@ -24,7 +24,7 @@ class App extends React.Component {
   updateResults = (apiResults) => {
     //this.setState({ headers: apiResults.headers });
     this.setState({ results: apiResults.results });
-    this.setState({ count: apiResults.count });
+    //this.setState({ count: apiResults.count });
   }
 
   render() {
@@ -35,10 +35,10 @@ class App extends React.Component {
         />
         <Form
           apiResults={this.updateResults}
-          giveAppHeaders={this.collectHeaders}
+        //giveAppHeaders={this.collectHeaders}
         />
         <Results
-          count={this.state.count}
+          //  count={this.state.count}
           results={this.state.results}
         />
         <Footer />
